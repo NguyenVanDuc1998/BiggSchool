@@ -5,12 +5,16 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Data.Entity;
+using BiggSchool.ViewModels;
 
 namespace BiggSchool.Controllers
 {
     public class HomeController : Controller
     {
+
+
         private ApplicationDbContext _dbContext;
+
         public HomeController()
         {
             _dbContext = new ApplicationDbContext();
@@ -22,7 +26,13 @@ namespace BiggSchool.Controllers
                 .Include(c => c.Category)
                 .Where(c => c.DateTime > DateTime.Now);
 
-            return View(upcommingCourse);
+            var viewModel = new CoursesViewModel
+            {
+                UpcommingCourses = upcommingCourse,
+                ShowAction = User.Identity.IsAuthenticated
+            };
+
+            return View(viewModel);
         }
 
         public ActionResult About()

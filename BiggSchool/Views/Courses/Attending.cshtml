@@ -1,7 +1,13 @@
-﻿@model  BiggSchool.ViewModels.CoursesViewModel
+﻿
+@model  BiggSchool.ViewModels.CoursesViewModel
 @{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Attending";
 }
+
+<h2>Attending</h2>
+
+
+
 <link href="~/Content/Site.css" rel="stylesheet" />
 <ul class="course">
     @foreach (var course in Model.UpcommingCourses)
