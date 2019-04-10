@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Globalization;
-using System.Linq;
+using System.Linq;asd
 using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Web;
@@ -151,7 +151,7 @@ namespace BiggSchool.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Name = model.Name };
+                var user = new ApplicationUser { UserName = model.Email,Email = model.Email ,Name = model.Name };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

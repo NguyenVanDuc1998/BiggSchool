@@ -37,20 +37,18 @@ navbar-inverse .navbar-nav > li > a{
     list-style: none;
 }
 .course > li {
-    position:relative;
-    margin-bottom:30px;
+    position: relative;
+    margin-bottom: 30px;
 }
-.course > li.date {
+.course > li .date {
     text-align: center;
-    background-color: #4cff00;
+    background-color: #d41d50;
     color: white;
     width: 60px;
     border-radius: 8px;
-
 }
-.course > li.absolute {
-    position:absolute;
+.course > li .details {
+    position: absolute;
     top: 0;
-    left:70px;
+    left: 70px;
 }
-
